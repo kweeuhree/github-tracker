@@ -1,8 +1,9 @@
 import React from 'react';
 import Button from '../components/Button/Button';
+import UserSearch from '../components/UserSearch/UserSearch';
 import { useNavigate } from 'react-router-dom';
 
-const MainLayout = () => {
+const MainLayout = ({ user }) => {
   const navigate = useNavigate();
 
   const handleClick = () => {
@@ -16,7 +17,7 @@ const MainLayout = () => {
 
         <div className='info'>github is amazing</div>
         <Button action={handleClick} type={'Find a User'} />
-
+        <UserSearch user={user}/>
       </section>
 
     </main>

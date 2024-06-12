@@ -28,8 +28,7 @@ function App() {
       <NavBar />
 
       <Routes>
-          <Route path='/' element={<MainLayout />} />
-          {/* <Route path='/home' element={<MainLayout />} /> */}
+          <Route path='/' element={<MainLayout user={randomNotableUser}/>} />
           <Route path='/search' element={<UserSearch user={randomNotableUser}/>} />
           <Route path='/kweeuhree' element={<UserSearch user={'kweeuhree'} />} />
           <Route path='/firstnamenika' element={<UserSearch user={'firstnamenika'} />} />
