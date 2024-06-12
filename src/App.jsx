@@ -1,30 +1,22 @@
+import { useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom';
+//css
+import './App.css';
+//components
 import NavBar from './components/NavBar/NavBar';
 import Footer from './components/NavBar/Footer';
 import MainLayout from './pages/MainLayout';
 import UserSearch from './components/UserSearch/UserSearch';
-import './App.css';
-import { useEffect } from 'react';
+//notable users data
+import { notableUsers } from './utils/notableUsers';
+
+
 
 function App() {
 
   useEffect(() => {
     getRandomNotableUser();
   }, []);
-
-  const notableUsers = [
-      { 
-        notable: 'python creator', 
-        nickname: 'gvanrossum'
-    }, {
-       notable: 'linux creator', 
-       nickname: 'torvalds'
-    }, {
-       notable: 'Lennart Poettering is a German software engineer working for Microsoft and the original author of PulseAudio, Avahi and systemd.', 
-       nickname: 'poettering'
-      
-    }
-  ];
 
   const getRandomNotableUser = () => {
     const randomIndex = Math.floor(Math.random() * notableUsers.length);

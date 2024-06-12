@@ -1,15 +1,14 @@
 import React, { useState, useEffect } from 'react';
+//useLocation object will help define current path
 import { useLocation } from 'react-router-dom';
-import { fetchUserData } from '../../utils/fetchData';
+//components
 import Card from '../Card/Card';
 import Form from '../Form/Form';
+//github fetch logic
+import { fetchUserData } from '../../utils/fetchData';
 
-// User search is supposed to take 'user' and fetch info with that search term,
-// and send found info as props to Card
 
 const UserSearch = ({ user }) => {
-
-  console.log('user object inside userSearch' , user);
 
   const [userData, setUserData] = useState({
     notable: null,
