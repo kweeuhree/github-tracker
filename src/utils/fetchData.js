@@ -2,7 +2,7 @@ const getRepos = async (reposUrl) => {
     try {
       const response = await fetch(reposUrl);
       const data = await response.json();
-    //   console.log('data inside getRepos of fetchData');
+    //   console.log('data inside getRepos of fetchData', data);
       return data;
 
     } catch (error) {
@@ -23,7 +23,7 @@ const fetchUser = async (username) => {
       const data = await response.json();
       const reposUrl = data.repos_url;
 
-    //   console.log(data);
+      console.log(data);
 
       return { data, reposUrl };
 

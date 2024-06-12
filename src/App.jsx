@@ -15,8 +15,8 @@ function App() {
 
   const getRandomNotableUser = () => {
     const randomIndex = Math.floor(Math.random() * notableUsers.length);
-    console.log(randomIndex, ' random index');
-    console.log('random user', notableUsers[randomIndex])
+    // console.log(randomIndex, ' random index');
+    // console.log('random user', notableUsers[randomIndex])
     return notableUsers[randomIndex];
   }
 
@@ -30,8 +30,8 @@ function App() {
       <Routes>
           <Route path='/' element={<MainLayout user={randomNotableUser}/>} />
           <Route path='/search' element={<UserSearch user={randomNotableUser}/>} />
-          <Route path='/kweeuhree' element={<UserSearch user={'kweeuhree'} />} />
-          <Route path='/firstnamenika' element={<UserSearch user={'firstnamenika'} />} />
+          <Route path='/kweeuhree' element={<UserSearch user={{nickname: 'kweeuhree'}} />} />
+          <Route path='/firstnamenika' element={<UserSearch user={{nickname: 'firstnamenika'}} />} />
       </Routes>
 
       <Footer />
