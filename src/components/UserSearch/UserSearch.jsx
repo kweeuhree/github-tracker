@@ -9,35 +9,37 @@ import Form from '../Form/Form';
 
 const UserSearch = ({ user }) => {
 
+  console.log('user object inside userSearch' , user);
+
   const [userData, setUserData] = useState({
+    notable: null,
     info: null,
     repos: []
   });
 
   const fetchData = async (username) => {
     const userInfo = await fetchUserData(username);
-    setUserData({info: userInfo.data, repos: userInfo.reposData});
+    displayUser(userInfo);
     console.log(userInfo.data, 'user Data of UserSearch');
   }
 
   useEffect(() => {
-    if (user) {
-      fetchData(user);
+      fetchData(user.nickname);
       console.log('attempting fetch n1')
-    } else {
-      setUserData({info: null, repos: []})
-    }
+
   }, [user]);
 
   const location = useLocation();
   const path = location.pathname;
   
-
+const displayUser = (userInfo) => {
+  setUserData({notable: user.notable, info: userInfo.data, repos: userInfo.reposData});
+}
 
   return (
     <div className="user-search-container">
       {path.includes('search') && <Form userSearch={fetchUserData} />}
-      <Card user={userData.info} repos={userData.repos} />
+      <Card user={userData.info} repos={userData.repos} notable={userData.notable} />
     </div>
   );
 };

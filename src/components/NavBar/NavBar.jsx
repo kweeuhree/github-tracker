@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const NavBar = () => {
 
-  const links = ['home', 'search', 'kweeuhree', 'firstnamenika'];
+  const links = ['search', 'kweeuhree', 'firstnamenika'];
 
   const linksJSX = links.map((item, index) => (
     <li key={index}>

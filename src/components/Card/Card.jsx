@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Card = ({ user, repos }) => {
+const Card = ({ user, repos, notable }) => {
 console.log(user, repos, ' inside Card');
   const loaded = () => {
 
@@ -10,7 +10,11 @@ console.log(user, repos, ' inside Card');
 
 
     return (
+
       <div className="card-container">
+        
+        {notable && <div>{notable}</div>}
+
             <div className="avatar-container">
               <img src={user.avatar_url} alt={user.login} />
             </div>

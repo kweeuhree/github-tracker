@@ -2,7 +2,6 @@ const getRepos = async (reposUrl) => {
     try {
       const response = await fetch(reposUrl);
       const data = await response.json();
-    //   setUserData((prev) => ({ ...prev, repos: data }));
       console.log('data inside getRepos of fetchData');
       return data;
 
@@ -23,10 +22,6 @@ const fetchUser = async (username) => {
       const response = await fetch(fetchRequest);
       const data = await response.json();
       const reposUrl = data.repos_url;
-    //   setUserData((prev) => ({ ...prev, info: data }));
-    //   if (reposUrl) {
-    //     getRepos(reposUrl);
-    //   }
 
       console.log(data);
 
