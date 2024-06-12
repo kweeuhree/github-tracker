@@ -9,7 +9,7 @@ const Form = (props) => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    props.userSearch(formData.searchTerm);
+    props.fetchUserData(formData.searchTerm);
     event.target.reset();
   };
 

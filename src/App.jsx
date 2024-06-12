@@ -16,7 +16,7 @@ function App() {
       <Routes>
           <Route path='/' element={<MainLayout />} />
           <Route path='/home' element={<MainLayout />} />
-          <Route path='/search' element={<UserSearch />} />
+          <Route path='/search' element={<UserSearch user={'gvanrossum'}/>} />
           <Route path='/kweeuhree' element={<UserSearch user={'kweeuhree'} />} />
           <Route path='/firstnamenika' element={<UserSearch user={'firstnamenika'} />} />
       </Routes>
