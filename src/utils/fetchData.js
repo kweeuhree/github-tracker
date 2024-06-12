@@ -2,7 +2,7 @@ const getRepos = async (reposUrl) => {
     try {
       const response = await fetch(reposUrl);
       const data = await response.json();
-      console.log('data inside getRepos of fetchData');
+    //   console.log('data inside getRepos of fetchData');
       return data;
 
     } catch (error) {
@@ -11,19 +11,19 @@ const getRepos = async (reposUrl) => {
   };
 
 const fetchUser = async (username) => {
-    console.log('attempting fetch');
+    // console.log('attempting fetch');
     const baseUrl = `https://api.github.com/`;
     const wordQuery = 'users/';
     const fetchRequest = `${baseUrl}${wordQuery}${username}`;
 
-    console.log(fetchRequest);
+    // console.log(fetchRequest);
 
     try {
       const response = await fetch(fetchRequest);
       const data = await response.json();
       const reposUrl = data.repos_url;
 
-      console.log(data);
+    //   console.log(data);
 
       return { data, reposUrl };
 

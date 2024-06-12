@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Card = ({ user, repos, notable }) => {
-console.log(user, repos, ' inside Card');
+// console.log(user, repos, ' inside Card');
   const loaded = () => {
 
     const reposJSX = repos.map((item, index) => (

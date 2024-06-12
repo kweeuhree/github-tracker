@@ -1,4 +1,3 @@
-import { useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom';
 //css
 import './App.css';
@@ -13,10 +12,6 @@ import { notableUsers } from './utils/notableUsers';
 
 
 function App() {
-
-  useEffect(() => {
-    getRandomNotableUser();
-  }, []);
 
   const getRandomNotableUser = () => {
     const randomIndex = Math.floor(Math.random() * notableUsers.length);

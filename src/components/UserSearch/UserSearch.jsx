@@ -19,12 +19,12 @@ const UserSearch = ({ user }) => {
   const fetchData = async (username) => {
     const userInfo = await fetchUserData(username);
     displayUser(userInfo);
-    console.log(userInfo.data, 'user Data of UserSearch');
+    // console.log(userInfo.data, 'user Data of UserSearch');
   }
 
   useEffect(() => {
       fetchData(user.nickname);
-      console.log('attempting fetch n1')
+      // console.log('attempting fetch n1')
 
   }, [user]);
 
