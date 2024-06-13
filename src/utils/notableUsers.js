@@ -1,4 +1,4 @@
-export const notableUsers = [
+const notableUsers = [
     { 
       notable: `Guido van Rossum is a Dutch programmer. 
               He is the creator of the Python programming language, 
@@ -40,3 +40,8 @@ export const notableUsers = [
      nickname: 'BjarneStroustrup'
  }
 ];
+
+export const getRandomNotableUser = () => {
+   const randomIndex = Math.floor(Math.random() * notableUsers.length);
+   return notableUsers[randomIndex];
+ }

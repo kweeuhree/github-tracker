@@ -7,16 +7,11 @@ import Footer from './components/NavBar/Footer';
 import MainLayout from './pages/MainLayout';
 import UserSearch from './components/UserSearch/UserSearch';
 //notable users data
-import { notableUsers } from './utils/notableUsers';
+import { getRandomNotableUser } from './utils/notableUsers';
 
 
 
 function App() {
-
-  const getRandomNotableUser = () => {
-    const randomIndex = Math.floor(Math.random() * notableUsers.length);
-    return notableUsers[randomIndex];
-  }
 
   const randomNotableUser = getRandomNotableUser();
 
