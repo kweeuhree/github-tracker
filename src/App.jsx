@@ -15,8 +15,6 @@ function App() {
 
   const getRandomNotableUser = () => {
     const randomIndex = Math.floor(Math.random() * notableUsers.length);
-    // console.log(randomIndex, ' random index');
-    // console.log('random user', notableUsers[randomIndex])
     return notableUsers[randomIndex];
   }
 
