@@ -13,7 +13,8 @@ const UserSearch = ({ user }) => {
   const [userData, setUserData] = useState({
     notable: null,
     info: null,
-    repos: []
+    repos: [],
+    mostUsedLang: ''
   });
 
   const fetchData = async (username) => {
@@ -32,7 +33,7 @@ const UserSearch = ({ user }) => {
   const path = location.pathname;
   
 const displayUser = (userInfo) => {
-  setUserData({notable: user.notable, info: userInfo.data, repos: userInfo.reposData});
+  setUserData({notable: user.notable, info: userInfo.data, repos: userInfo.reposData, mostUsedLang: userInfo.mostUsedLang});
 }
 
   return (
