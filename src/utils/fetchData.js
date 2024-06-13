@@ -14,11 +14,13 @@ const getRepos = async (reposUrl) => {
     //fetch with repos url
       const response = await fetch(reposUrl);
       //parse json
-      const data = await response.json();
+      const reposData = await response.json();
     //   console.log('data inside getRepos of fetchData', data);
 
+    const commitHistory = getCommitHistory(reposData);
+
     //return data
-      return data;
+      return {commitHistory, reposData};
 
     } catch (error) {
       console.error('Error fetching repositories: ', error);
@@ -66,6 +68,7 @@ const fetchUser = async (username) => {
  * @returns {Array<string>} An array of the top 3 most used programming languages.
  */
 const getMostUsedLang = (reposData) => {
+    console.log(reposData, 'reposData');
     // get all languages
     const allLanguages = reposData
     // filter every repo where language exists
@@ -107,6 +110,10 @@ const getMostUsedLang = (reposData) => {
     return topLanguages;
 }
 
+const getCommitHistory = (data) => {
+    return 'im a commit history';
+}
+
 /**
  * Fetches user data, repositories, and most used languages for a given username.
  *
@@ -120,9 +127,10 @@ export const fetchUserData = async (username) => {
     // get user data and repos url
     const { data, reposUrl } = await fetchUser(username);
     // get array with first 30 repositories
-    const reposData = await getRepos(reposUrl);
+    const {commitHistory, reposData} = await getRepos(reposUrl);
+    console.log(reposData, 'reposData inside fetchUserData')
     // get top three most used languages
     const mostUsedLang = getMostUsedLang(reposData);
 
-    return { data, reposData, mostUsedLang };
+    return { data, reposData, commitHistory, mostUsedLang };
 }
