@@ -20,7 +20,7 @@ const UserSearch = ({ user }) => {
   const fetchData = async (username) => {
     const userInfo = await fetchUserData(username);
     displayUser(userInfo);
-    // console.log(userInfo.data, 'user Data of UserSearch');
+    // console.log(userInfo, 'user Data of UserSearch');
   }
 
   useEffect(() => {
@@ -32,13 +32,20 @@ const UserSearch = ({ user }) => {
   const location = useLocation();
   const path = location.pathname;
   
-const displayUser = (userInfo) => {
-  setUserData({notable: user.notable, info: userInfo.data, repos: userInfo.reposData, mostUsedLang: userInfo.mostUsedLang});
-}
+  const displayUser = (userInfo) => {
+    console.log('setting data');
+    setUserData((prev) => ({
+      ...prev,
+      notable: user.notable,
+      info: userInfo.data,
+      repos: userInfo.reposData,
+      mostUsedLang: userInfo.mostUsedLang
+    }));
+  };
 
   return (
     <div className="user-search-container">
-      {path.includes('search') && <Form userSearch={fetchUserData} />}
+      {path.includes('search') && <Form userSearch={fetchData} />}
       <Card user={userData.info} repos={userData.repos} notable={userData.notable} mostUsedLang={userData.mostUsedLang}/>
     </div>
   );

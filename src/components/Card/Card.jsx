@@ -2,7 +2,7 @@ import React from 'react';
 import Stats from '../Stats/Stats';
 
 const Card = ({ user, repos, notable, mostUsedLang }) => {
-console.log(repos, ' inside Card');
+// console.log(repos, ' inside Card');
   const loaded = () => {
 
     const reposJSX = repos.map((item, index) => (
