@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Card = ({ user, repos, notable }) => {
+const Card = ({ user, repos, notable, mostUsedLang }) => {
 console.log(repos, ' inside Card');
   const loaded = () => {
 
@@ -26,7 +26,7 @@ console.log(repos, ' inside Card');
                 <img src={user.avatar_url} alt={user.login} />
               </div>
               <p>
-                
+                {mostUsedLang}
               </p>
             </div>
 

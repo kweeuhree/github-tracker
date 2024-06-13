@@ -39,7 +39,7 @@ const displayUser = (userInfo) => {
   return (
     <div className="user-search-container">
       {path.includes('search') && <Form userSearch={fetchUserData} />}
-      <Card user={userData.info} repos={userData.repos} notable={userData.notable} />
+      <Card user={userData.info} repos={userData.repos} notable={userData.notable} mostUsedLang={userData.mostUsedLang}/>
     </div>
   );
 };
