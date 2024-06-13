@@ -22,7 +22,7 @@ console.log(repos, ' inside Card');
         
         {notable && <div>{notable}</div>}
 
-            <div className='top-container'>
+            <div className='display-flex flex-around top-container'>
               <div className="avatar-container">
                 <img src={user.avatar_url} alt={user.login} />
               </div>

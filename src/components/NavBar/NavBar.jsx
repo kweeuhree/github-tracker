@@ -15,7 +15,7 @@ const NavBar = () => {
 
   return (
     <nav>
-      <ul className='nav-ul'>{linksJSX}</ul>
+      <ul className='display-flex flex-around nav-ul'>{linksJSX}</ul>
     </nav>
   )
 }
