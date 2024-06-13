@@ -1,4 +1,5 @@
 import React from 'react';
+import Stats from '../Stats/Stats';
 
 const Card = ({ user, repos, notable, mostUsedLang }) => {
 console.log(repos, ' inside Card');
@@ -25,9 +26,9 @@ console.log(repos, ' inside Card');
               <div className="avatar-container">
                 <img src={user.avatar_url} alt={user.login} />
               </div>
-              <p>
-                {mostUsedLang}
-              </p>
+                {/* most used languagese */}
+                <Stats mostUsedLang={mostUsedLang} />
+
             </div>
 
             <div className="bio">
