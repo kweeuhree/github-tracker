@@ -9,8 +9,6 @@ import UserSearch from './components/UserSearch/UserSearch';
 //notable users data
 import { getRandomNotableUser } from './utils/notableUsers';
 
-
-
 function App() {
 
   const randomNotableUser = getRandomNotableUser();
