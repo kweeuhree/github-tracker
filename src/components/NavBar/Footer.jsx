@@ -9,7 +9,7 @@ const Footer = () => {
 
   return (
     <footer>
-      <NavBar />
+      {/* <NavBar /> */}
       <div className="display-flex flex-center copyright">{copy} Veronika Kolesnikova, {year}</div>
     </footer>
   )

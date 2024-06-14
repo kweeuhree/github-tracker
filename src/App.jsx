@@ -17,8 +17,11 @@ function App() {
 
   return (
     <main className="display-flex flex-col main-layout">
+
+<Header />
+
       <NavBar />
-      <Header />
+      
       <Routes>
           <Route path='/' element={<Navigate to={'/search'}/>} />
           <Route path='/search' element={<MainLayout user={randomNotableUser}/>} />

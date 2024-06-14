@@ -28,7 +28,7 @@ const Card = ({ user, repos, notable, mostUsedLang }) => {
 
       <div className="card-container">
         
-        {notable && <div>{notable}</div>}
+        {notable && <div className='notable'>{notable}</div>}
 
             <div className='display-flex flex-around top-container'>
               <ImageContainer  src={user.avatar_url} alt={user.login} />

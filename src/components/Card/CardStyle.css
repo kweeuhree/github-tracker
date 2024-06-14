@@ -1,4 +1,5 @@
 .card-container {
     border: solid yellow;
-    min-height: 50vh;
+    height: 80vh;
+    width: 95vw;
 }
