@@ -6,6 +6,7 @@
     font-weight: 400;
     white-space: nowrap;
     width: 100vw;
+    overflow-x:hidden;
 }
 
 .animate-text {
@@ -15,6 +16,7 @@
     animation: loop 18s linear infinite;
     word-spacing: 4rem;
     letter-spacing: 1.5rem;
+    right:0;
 }
 
 .animate-text2 {
@@ -44,7 +46,7 @@
 }
 
 .image-overlay {
-    background-image: url('../../assets/background-image/water-color-opaque.png');    
+    background-image: url('../../assets/background-image/water-color-transparent.png');    
     background-repeat: repeat-x;
     background-size: contain;
     z-index:2;
