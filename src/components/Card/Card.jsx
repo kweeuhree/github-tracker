@@ -27,7 +27,8 @@ const Card = ({ user, repos, notable, mostUsedLang }) => {
   //loading gif
   const loadingGif = {
     src: "https://media.tenor.com/On7kvXhzml4AAAAj/loading-gif.gif",
-    alt:"Loading..."
+    alt:"Loading...",
+    class: 'loading-gif'
   };
 
   // display links to repositories on load
@@ -84,8 +85,7 @@ const Card = ({ user, repos, notable, mostUsedLang }) => {
   };
 
   const loading = () => {
-    return <ImageContainer src={loadingGif.src} alt={loadingGif.alt} />
-   
+    return <ImageContainer thisClass={loadingGif.class} src={loadingGif.src} alt={loadingGif.alt} />
   };
 
   return user ? loaded() : loading(); 
