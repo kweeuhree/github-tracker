@@ -8,9 +8,13 @@ body {
     justify-content: space-between;
 }
 
-main {
+.main-layout {
     min-width: 95vw;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid orange;
 }
+
 
 .display-flex {
     display: flex;
@@ -28,4 +32,8 @@ main {
 .flex-around {
     align-items: center;
     justify-content: space-around;
+}
+
+footer {
+    width: 100%;
 }
