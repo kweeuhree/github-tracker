@@ -15,7 +15,7 @@ function App() {
 
 
   return (
-    <main className="App">
+    <main className="display-flex flex-col">
       <NavBar />
 
       <Routes>
