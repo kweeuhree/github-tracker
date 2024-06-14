@@ -28,7 +28,11 @@ const Card = ({ user, repos, notable, mostUsedLang }) => {
   const loadingGif = {
     src: "https://media.tenor.com/On7kvXhzml4AAAAj/loading-gif.gif",
     alt:"Loading...",
-    class: 'loading-gif'
+    thisClass: 'loading-gif'
+  };
+
+  const loading = () => {
+    return <ImageContainer thisClass={loadingGif.thisClass} src={loadingGif.src} alt={loadingGif.alt} />
   };
 
   // display links to repositories on load
@@ -44,7 +48,6 @@ const Card = ({ user, repos, notable, mostUsedLang }) => {
        
     ))
 
-// main function ------------------------------------------------------
     return (
 
       <div className="card-container">
@@ -56,7 +59,7 @@ const Card = ({ user, repos, notable, mostUsedLang }) => {
 
             {/* display image */}
             <div className='display-flex flex-around top-container'>
-              <ImageContainer  src={user.avatar_url} alt={user.login} />
+              <ImageContainer thisClass={'user-avatar'} src={user.avatar_url} alt={user.login} />
               
                 {/* most used languagese */}
                 <Stats mostUsedLang={mostUsedLang} />
@@ -84,10 +87,8 @@ const Card = ({ user, repos, notable, mostUsedLang }) => {
     );
   };
 
-  const loading = () => {
-    return <ImageContainer thisClass={loadingGif.class} src={loadingGif.src} alt={loadingGif.alt} />
-  };
 
+// main function ------------------------------------------------------
   return user ? loaded() : loading(); 
 }
 
