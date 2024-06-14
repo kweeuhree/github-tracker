@@ -1,3 +1,14 @@
 nav {
-    border: solid orangered;
+    /* border: solid orangered; */
+}
+
+nav ul {
+    /* border: solid white; */
+}
+
+nav ul li  {
+    /* border: solid slateblue; */
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
