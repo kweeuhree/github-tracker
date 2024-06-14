@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Tiny5&display=swap');
+
+.form-container {
+    /* border: solid purple; */
+    justify-content: flex-end;
+}
+
+form {
+    /* border: solid blue; */
+    height: 10vh;
+    width: 50%;
+    margin-inline-end: 5%;
+}
+
+form > input {
+    height: 40%;
+    border-radius: 2em;
+}
+
+form > input[type="text"] {
+    width: 60%;
+}
+
+form > input[type="text"]::placeholder {
+    color: aliceblue;
+    font-family: "Outfit", sans-serif;
+    padding-inline-start: 5%;
+    letter-spacing: 0.1rem;
+} 
+
+form > input[type="submit"] {
+    background-color: transparent;
+    width: 25%;
+    font-family: "Outfit", sans-serif;
+    letter-spacing: 0.2rem;
+}
+
+form > input[type="submit"]:active {
+    background-color: rgba(240, 248, 255, 0.123);
+    letter-spacing: 0.22rem;
+}

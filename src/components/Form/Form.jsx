@@ -1,5 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
+import './FormStyle.css';
 
 const Form = (props) => {
 
@@ -19,16 +20,18 @@ const Form = (props) => {
   };
 
   return (
-    <div className="form-container">
-      <form onSubmit={handleSubmit}>
+    <div className='display-flex form-container'>
+      <form className='display-flex flex-center flex-around' onSubmit={handleSubmit}>
+        
+        <input type="submit" value="Submit" />
+
         <input 
           onChange={handleChange} 
           type="text" 
           name='userForm' 
           placeholder='enter username' 
         />
-
-        <input type="submit" value="Submit" />
+       
       </form>
     </div>
   );
