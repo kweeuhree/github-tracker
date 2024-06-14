@@ -5,7 +5,7 @@
     text-transform: uppercase;
     font-weight: 400;
     white-space: nowrap;
-    width: 100%;
+    width: 100vw;
 }
 
 .animate-text {
