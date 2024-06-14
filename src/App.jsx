@@ -5,6 +5,7 @@ import './App.css';
 import NavBar from './components/NavBar/NavBar';
 import Footer from './components/NavBar/Footer';
 import MainLayout from './pages/MainLayout';
+import Header from './components/Header/Header';
 import UserSearch from './components/UserSearch/UserSearch';
 //notable users data
 import { getRandomNotableUser } from './utils/notableUsers';
@@ -17,7 +18,7 @@ function App() {
   return (
     <main className="display-flex flex-col main-layout">
       <NavBar />
-
+      <Header />
       <Routes>
           <Route path='/' element={<Navigate to={'/search'}/>} />
           <Route path='/search' element={<MainLayout user={randomNotableUser}/>} />
