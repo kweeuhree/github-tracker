@@ -5,7 +5,7 @@ const Stats = ({ mostUsedLang }) => {
 
   return (
    
-    <div className='all-languages'>
+    <div className='display-flex flex-center all-languages'>
          {/* mostUsedLang[0] is largest */}
         <div>{mostUsedLang[0]}</div>
         {/* mostUsedLang[1] is second largest */}
