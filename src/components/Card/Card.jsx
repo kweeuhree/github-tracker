@@ -1,5 +1,6 @@
 import React from 'react';
 import Stats from '../Stats/Stats';
+import './CardStyle.css';
 
 const Card = ({ user, repos, notable, mostUsedLang }) => {
 // console.log(repos, ' inside Card');

@@ -1,3 +1,13 @@
+body {
+    border: solid blue;
+    min-height: 98vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
 .display-flex {
     display: flex;
 }

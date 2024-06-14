@@ -1,4 +1,4 @@
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
 //css
 import './App.css';
 //components
@@ -15,18 +15,18 @@ function App() {
 
 
   return (
-    <div className="App">
+    <main className="App">
       <NavBar />
 
       <Routes>
-          <Route path='/' element={<MainLayout user={randomNotableUser}/>} />
-          <Route path='/search' element={<UserSearch user={randomNotableUser}/>} />
+          <Route path='/' element={<Navigate to={'/search'}/>} />
+          <Route path='/search' element={<MainLayout user={randomNotableUser}/>} />
           <Route path='/kweeuhree' element={<UserSearch user={{nickname: 'kweeuhree'}} />} />
           <Route path='/firstnamenika' element={<UserSearch user={{nickname: 'firstnamenika'}} />} />
       </Routes>
 
       <Footer />
-    </div>
+    </main>
   );
 };
 

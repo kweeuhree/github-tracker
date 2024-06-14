@@ -139,3 +139,29 @@ export const fetchUserData = async (username) => {
 
   return { data, reposData, mostUsedLang };
 }
+
+
+// EXPERIMENTAL FEATURE: GET COMMIT HISTORY:---------------------------------------------------------------------------------
+// const getCommitHistory = async (reposData) => {
+//   let numOfCommits = 0;
+//   const getCommitPromise = async (repo) => {
+//     try {
+//       const properUrl = repo.commits_url.slice(0, repo.commits_url.length - 6);
+//        //fetch commits and return length
+//         const response = await fetch(properUrl);
+//         const commits = await response.json();
+//         return commits.length;
+//       } catch (error) {
+//       console.error(`Error fetching commits for ${repo.name}:`, error);
+//       return 0;
+//     }
+//   }
+//     await Promise.all(reposData.map(async (repo) => {
+//       const commitsLength = await getCommitPromise(repo);
+//       numOfCommits += commitsLength;
+//     }))
+  
+//   return numOfCommits;
+// }
+
+//-------------------------------------------------------------------------------------------------------------------------------
