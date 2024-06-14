@@ -31,9 +31,8 @@ const Card = ({ user, repos, notable, mostUsedLang }) => {
         {notable && <div>{notable}</div>}
 
             <div className='display-flex flex-around top-container'>
-              <div className="avatar-container">
-                <img src={user.avatar_url} alt={user.login} />
-              </div>
+              <ImageContainer  src={user.avatar_url} alt={user.login} />
+              
                 {/* most used languagese */}
                 <Stats mostUsedLang={mostUsedLang} />
 
