@@ -1,10 +1,10 @@
 import React from 'react';
 import './ImageContainerStyle.css';
 
-const ImageContainer = ({ src, alt }) => {
+const ImageContainer = ({ src, alt, thisClass }) => {
   return (
     <div className='image-container'>
-        <img src={src} alt={alt} />
+        <img className={thisClass} src={src} alt={alt} />
     </div>
   )
 }
