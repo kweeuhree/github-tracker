@@ -1,6 +1,8 @@
 import React from 'react';
 import Stats from '../Stats/Stats';
 import ImageContainer from '../ImageContainer/ImageContainer';
+import Anchor from '../Anchor/Anchor';
+
 import './CardStyle.css';
 
 const Card = ({ user, repos, notable, mostUsedLang }) => {
@@ -15,9 +17,7 @@ const Card = ({ user, repos, notable, mostUsedLang }) => {
 
     const reposJSX = repos.map((item, index) => (
           <li key={index}>
-            <a href={item.html_url}  target='_blank'>
-              {item.name}
-            </a>
+            <Anchor href={item.html_url} innerHtml={item.name} />
             <span>{item.language}</span>
           </li>
        
@@ -42,13 +42,16 @@ const Card = ({ user, repos, notable, mostUsedLang }) => {
               {user.bio}
             </div>
 
-            <div className="repos-container">
+            <div className="display-flex flex-around repos-container">
+              
               <div className="repos-number">{user.public_repos}</div>
+              
+            <Anchor href={user.html_url} innerHtml={user.html_url} />
+            
             </div>
 
-            <div className="stats">{user.html_url}</div>
-
-            <div className='all-repos'><ul>{reposJSX}</ul></div>
+            
+            <div className='display-flex all-repos'><ul>{reposJSX}</ul></div>
 
       </div> 
     );

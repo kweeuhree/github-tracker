@@ -2,4 +2,51 @@
     border: solid yellow;
     height: 80vh;
     width: 95vw;
+    overflow-y:auto;
+}
+
+.notable {
+    border: 1px solid red;
+}
+
+.top-container {
+    border: 1px solid green;
+}
+
+.top-container .image-container {
+    border: 1px solid blue;
+}
+
+.top-container img {
+    border-radius: 50%;
+}
+
+.bio {
+    border: 1px solid pink;
+}
+
+.repos-container {
+    border: 1px solid purple;
+}
+
+.repos-number {
+    border: 1px solid skyblue;
+}
+
+.url {
+    border: 1px solid seagreen;
+}
+
+.all-repos {
+    border: 1px solid orange;
+}
+
+.all-repos ul {
+    border: 1px solid gray;
+    /* height: 70%; */
+}
+
+.all-repos ul li {
+    list-style: none;
+    border: 1px solid red;
 }
