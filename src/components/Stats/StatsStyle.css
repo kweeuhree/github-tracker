@@ -5,31 +5,80 @@
 
 /* largest circle - most used language */
 .all-languages > div:first-child {
-    border: 1px solid red;
+    border: 0.2vw solid red;
     width:17rem;
     height: 17rem;
     border-radius: 50%;
     position: absolute;
     z-index: 1;
+    animation: first 5s cubic-bezier(0.42, 0, 0.58, 1) infinite;
+}
+
+@keyframes first {
+    0%, 100% {
+        border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%;
+    }
+
+    25% {
+        border-radius: 55% 45% 52% 38% / 40% 55% 45% 55%;
+    }
+
+    50% {
+        border-radius: 48% 52% 45% 55% / 42% 55% 48% 52%;
+    }
+
+    75% {
+        border-radius: 50% 42% 53% 47% / 43% 57% 43% 49%;
+    }
 }
 
 /* mid sized circle - 2nd most used language */
 .all-languages > div:nth-child(2) {
-    border: 1px solid orange;
+    border: 0.2vw solid blueviolet;
     width:11rem;
     height: 11rem;
     border-radius: 50%;
     position: absolute;
     z-index: 1;
+    animation: second 5s linear infinite;
+}
+
+@keyframes second {
+    0%, 100% {
+        border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%;
+    }
+
+    50% {
+        border-radius: 60% 40% 55% 45% / 45% 55% 45% 55%;
+    }
 }
 
 /* smallest circle - 3d most used language */
 
 .all-languages > div:last-child {
-    border: 1px solid blue;
+    border:0.2vw solid blue;
     width:6rem;
     height: 6rem;
     border-radius: 50%;
     position: absolute;
     z-index: 1;
+    animation: last 5s linear infinite;
+}
+
+@keyframes last {
+    0%, 100% {
+        border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%;
+    }
+
+    25% {
+        border-radius: 55% 45% 50% 40% / 40% 55% 45% 55%;
+    }
+
+    50% {
+        border-radius: 45% 55% 40% 50% / 50% 40% 55% 45%;
+    }
+
+    75% {
+        border-radius: 50% 40% 55% 45% / 45% 50% 45% 55%;
+    }
 }

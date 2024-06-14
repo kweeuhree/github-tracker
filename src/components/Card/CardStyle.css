@@ -24,22 +24,24 @@
 .top-container .image-container {
     /* border: 1px solid blue; */
     width: 30%;
+    min-height: 17rem;
 }
 
 .top-container img {
     border-radius: 50%;
 }
 
-/* .bio {
-    border: 1px solid pink;
+/* makes consistent space for bio*/
+.bio {
+    min-height:1.5rem;
 }
 
-.repos-container {
+/* .repos-container {
     border: 1px solid purple;
-}
-*/
+} */
+
 .repos-number {
-    border: 1px solid skyblue;
+    /* border: 1px solid skyblue; */
 }
 /* 
 .url {
