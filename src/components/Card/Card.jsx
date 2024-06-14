@@ -78,7 +78,7 @@ const Card = ({ user, repos, notable, mostUsedLang }) => {
             </div>
 
             {/* all repositories */}
-            <div className='display-flex all-repos'><ul>{reposJSX}</ul></div>
+            <div className='all-repos'><ul>{reposJSX}</ul></div>
 
       </div> 
     );

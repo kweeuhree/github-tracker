@@ -6,12 +6,12 @@ const Stats = ({ mostUsedLang }) => {
   return (
    
     <div className='display-flex flex-center all-languages'>
-         {/* mostUsedLang[0] is largest */}
+         {/* display most used language */}
         <div>{mostUsedLang[0]}</div>
-        {/* mostUsedLang[1] is second largest */}
-        <div>{mostUsedLang[1]}</div>
-        {/* mostUsedLang[2] is smallest */}
-        <div>{mostUsedLang[2]}</div>
+        {/* display second most used language if exists */}
+       {mostUsedLang[1] && <div>{mostUsedLang[1]}</div>}
+        {/* display third most used language if exists */}
+        {mostUsedLang[2] && <div>{mostUsedLang[2]}</div>}
     </div>
   )
 }
