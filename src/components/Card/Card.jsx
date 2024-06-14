@@ -1,9 +1,16 @@
 import React from 'react';
 import Stats from '../Stats/Stats';
+import ImageContainer from '../ImageContainer/ImageContainer';
 import './CardStyle.css';
 
 const Card = ({ user, repos, notable, mostUsedLang }) => {
 // console.log(repos, ' inside Card');
+
+  const loadingGif = {
+    src: "https://media.tenor.com/On7kvXhzml4AAAAj/loading-gif.gif",
+    alt:"Loading..."
+  };
+
   const loaded = () => {
 
     const reposJSX = repos.map((item, index) => (
@@ -49,7 +56,8 @@ const Card = ({ user, repos, notable, mostUsedLang }) => {
   };
 
   const loading = () => {
-    return <div>loading</div>;
+    return <ImageContainer src={loadingGif.src} alt={loadingGif.alt} />
+   
   };
 
   return user ? loaded() : loading(); 
