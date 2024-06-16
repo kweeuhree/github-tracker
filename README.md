@@ -1,6 +1,6 @@
-This is a GitHub tracker that is in the stage of development.
+This is a GitHub tracker that is in the stage of development. The main idea is to learn to visualize data, in this particular situation it was most used languages of a specific GitHub user.
 
-Built with React and Vite.
+Built with React and Vite. 
 
 Home Page loads a random notable GitHub user, such as Linus Torvalds, or Guido van Rossum.
 <br>
@@ -11,6 +11,10 @@ Home Page loads a random notable GitHub user, such as Linus Torvalds, or Guido v
   }<br>
 &nbsp;const randomNotableUser = getRandomNotableUser();
 </code>
+
+<p align='center'>
+    <img src='./public/screenshots/Screenshot Torvalds.png' alt='Screenshot with a page of Linus Torvalds, a random notable user of GitHub'/>
+</p>
 
 UserSearch component takes random notable user name and puts it through GitHub API, fetching relevant repositories, user bio and avatar.
 <br>
@@ -59,3 +63,23 @@ UserSearch component takes random notable user name and puts it through GitHub A
     return topLanguages;
     }
 </code>
+
+<p>Stats component animates border radii of most used languages elements. Creating an animation of this type was the main purpose of the entire app. Every border has a pseudo-class <code>::before</code> and <code>::after</code> that create more volume.</p>
+<p  align='center'>
+    <img width='400px' src='./public/screenshots/topLanguagesGif.gif' alt='Most used languages gif'/>
+</p>
+
+<hr>
+Shortcuts to both of my GitHub accounts are added as well:
+<code><br>
+< Route path='/kweeuhree' element={<MainLayout user={{nickname: 'kweeuhree'}} />} / > <br>
+< Route path='/firstnamenika' element={<MainLayout user={{nickname: 'firstnamenika'}} />} / >
+</code>
+
+<p align='center'>
+    <img src='./public/screenshots/Screenshot firstnamenika.png' alt='Screenshot with a page of firstnamenika'/>
+</p>
+
+<p align='center'>
+    <img src='./public/screenshots/Screenshot kweeuhree.png' alt='Screenshot with a page of kweeuhree'/>
+</p>

@@ -16,13 +16,11 @@
     animation: loop 18s linear infinite;
     word-spacing: 4rem;
     letter-spacing: 1.5rem;
-    right:0;
 }
 
 .animate-text2 {
     position: absolute;
     z-index: 0;
-    right: 0;
     font-size: 1.5rem;
     font-weight: 400;
     word-spacing: 2.5rem;
@@ -41,8 +39,8 @@
 }
 
 @keyframes loop {
-    0% {left: 100%;}
-    100% {left: -100%;}
+    0% {translate: 100%;}
+    100% {translate: -100%;}
 }
 
 .image-overlay {

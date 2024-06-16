@@ -7,7 +7,7 @@ import { getRandomNotableUser } from '../utils/notableUsers';
 //github fetch logic
 import { fetchUserData } from '../utils/fetchData';
 
-const MainLayout = ({user}) => {
+const MainLayout = ({ user }) => {
 
   const [userData, setUserData] = useState({
     info: null,
