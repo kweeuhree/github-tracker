@@ -1,13 +1,17 @@
 import React from 'react';
 import UserSearch from '../components/UserSearch/UserSearch';
 import './MainLayoutStyle.css'
+//notable users data
+import { getRandomNotableUser } from '../utils/notableUsers';
 
-const MainLayout = ({ user }) => {
+const MainLayout = () => {
+
+  const randomNotableUser = getRandomNotableUser();
 
   return (
     <div className='main-layout'>
         {/* <Button action={handleClick} type={'Find a User'} /> */}
-        <UserSearch user={user}/>
+        <UserSearch user={randomNotableUser}/>
     </div>
   )
 }
