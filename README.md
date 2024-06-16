@@ -64,14 +64,13 @@ UserSearch component takes random notable user name and puts it through GitHub A
     }
 </code>
 
-<p>Stats component animates border radii of most used languages elements. Creating an animation of this type was the main purpose of the entire app. Every border has a pseudo-class <code>::before</code> and <code>::after</code> that create more volume.</p>
+<p>Stats component animates border radii of most used languages elements. Creating an animation of this type was the main purpose of the entire app. Every border has pseudo-classes <code>::before</code> and <code>::after</code> that create more volume.</p><br>
 <p  align='center'>
     <img width='400px' src='./public/screenshots/topLanguagesGif.gif' alt='Most used languages gif'/>
 </p>
-
+<br>
 <hr>
-Shortcuts to both of my GitHub accounts are added as well:
-<code><br>
+Shortcuts to both of my GitHub accounts are added as well:<code><br>
 < Route path='/kweeuhree' element={<MainLayout user={{nickname: 'kweeuhree'}} />} / > <br>
 < Route path='/firstnamenika' element={<MainLayout user={{nickname: 'firstnamenika'}} />} / >
 </code>
