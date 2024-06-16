@@ -15,16 +15,16 @@ const MainLayout = ({user}) => {
     mostUsedLang: ''
   });
 
+  const randomNotableUser = getRandomNotableUser();
+
   useEffect(() => {
     if (user && user.nickname) {
       fetchData(user.nickname);
-    } else {
+    } else if( user === null ) {
       fetchData(randomNotableUser.nickname);
     }
     // console.log('attempting fetch n1')
 }, [user]);
-
-  const randomNotableUser = getRandomNotableUser();
 
   useEffect(() => {
     fetchData(randomNotableUser.nickname);
