@@ -19,9 +19,9 @@ function App() {
       
       <Routes>
           <Route path='/' element={<Navigate to={'/search'}/>} />
-          <Route path='/search' element={<MainLayout />} />
-          <Route path='/kweeuhree' element={<UserSearch user={{nickname: 'kweeuhree'}} />} />
-          <Route path='/firstnamenika' element={<UserSearch user={{nickname: 'firstnamenika'}} />} />
+          <Route path='/search' element={<MainLayout user={null}/>} />
+          <Route path='/kweeuhree' element={<MainLayout user={{nickname: 'kweeuhree'}} />} />
+          <Route path='/firstnamenika' element={<MainLayout user={{nickname: 'firstnamenika'}} />} />
       </Routes>
 
       <Footer />
